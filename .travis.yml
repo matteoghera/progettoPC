@@ -3,10 +3,8 @@ os:
 
 language: c
 sudo: false # only for faster builds
+compiler: gcc
 
-language: c
-sudo: false # only for faster builds
 script:
-  - cd cmake-build-debug
-  - ./parallel
-
+- gcc parallel.c -o parallel -lpthread -lm
+- ./parallel
