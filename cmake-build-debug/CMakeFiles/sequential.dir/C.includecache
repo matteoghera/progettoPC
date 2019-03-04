@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/matteoinformatica/Documenti/primoProgettoPC/progetto/sequential.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+unistd.h
+-
+string.h
+-
+signal.h
+-
+time.h
+-
+
