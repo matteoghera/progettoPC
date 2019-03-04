@@ -1,4 +1,0 @@
-/home/matteoinformatica/Documenti/primoProgettoPC/progetto/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/matteoinformatica/Documenti/primoProgettoPC/progetto/cmake-build-debug/CMakeFiles/parallel.dir
-/home/matteoinformatica/Documenti/primoProgettoPC/progetto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/matteoinformatica/Documenti/primoProgettoPC/progetto/cmake-build-debug/CMakeFiles/sequential.dir

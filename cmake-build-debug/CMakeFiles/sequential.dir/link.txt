@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/sequential.dir/sequential.c.o  -o sequential -lm 
