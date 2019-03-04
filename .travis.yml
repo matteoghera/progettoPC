@@ -3,9 +3,6 @@ os:
 
 language: c
 sudo: false # only for faster builds
-
-language: c
-sudo: false # only for faster builds
 script:
   - cd cmake-build-debug
   - ./parallel
