@@ -190,6 +190,7 @@ int parallelKMeans(){
     for(i=0;i<NUM_PROCRESS;i++){
         printf("Thread %d has been created.\n",i+1);
         result_code=pthread_create(&threads[i],NULL,MakeCluster, (void*)headChunk);
+	sleep(1);
         headChunk=assignChuncks(headChunk);
     }
     printf("All threads are created.\n");
