@@ -138,6 +138,11 @@ int computesAverangeForAllClusters(double ** actualClusterDescription) {
     /*
      * computes the centroid as the average of all the points of each cluster, to minimize SSE.
      */
+    for (int r=0; r<k; r++){
+        printf("cluster description : %f ", actualClusterDescription[r][0]);
+        printf("cluster description : %f ", actualClusterDescription[r][1]);
+        printf("cluster description : %f ", actualClusterDescription[r][2]);
+    }
     int result=FALSE;
     Clusters* nextCluster=clusters;
     for(int i=0; i<k; i++){
@@ -204,13 +209,12 @@ int parallelKMeans(){
     for(i=0;i<NUM_PROCRESS;i++){
        double **myClusterDescription;
        result_code=pthread_join(threads[i],(void*)&myClusterDescription);
-       printf("Thread %d ended.\n",i+1);
+       printf("Thread %d ended.\n", result_code);
         /* for ( c =0; c<colonne-1 ; c++){
            for (r=0; r<righe-1; r++)
                 printf("%f my:", myClusterDescription[c][r]);
        }*/
        mergeSolution(clusterDescription, myClusterDescription);
-       
    }
        /*  for ( c =0; c<colonne-1 ; c++){
            for (r=0; r<righe-1; r++)
