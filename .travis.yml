@@ -6,5 +6,5 @@ sudo: false # only for faster builds
 compiler: gcc
 
 script:
-- gcc parallel.c -o parallel -lpthread -lm
+- cc parallel2.c -o parallel -lpthread -lm
 - ./parallel
