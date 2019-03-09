@@ -8,5 +8,7 @@ sudo: false # only for faster builds
 compiler: gcc
 
 script:
-- gcc parallel2.c -o parallel -lpthread -lm
+- gcc parallel.c -o parallel -lpthread -lm
+- gcc sequential.c -o sequential -lpthread -lm
+- ./sequential
 - ./parallel

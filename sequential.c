@@ -5,11 +5,11 @@
 #include <string.h>
 #include <signal.h>
 #include <time.h>
+#include <sys/time.h>
 
 #define FALSE 0
 #define TRUE 1
 #define TOLL 0.01
-#define BILLION  1000000000L
 
 // stucture that represents each cluster.
 struct Clusters {
@@ -36,7 +36,7 @@ typedef struct Points Points;
 
 Points* head;
 Clusters* clusters;
-double timeIO, executionTime;
+long timeIO, executionTime;
 
 
 
@@ -214,7 +214,6 @@ void addRecord(char record[]){
 
     newRecord->x=x;
     newRecord->y=y;
-    //printf("%f, %f", x, y);
 }
 
 void addCentroid(char record[]){
@@ -246,7 +245,6 @@ void addCentroid(char record[]){
     newRecord->cx=x;
     newRecord->cy=y;
     newRecord->label=tok;
-    //printf("%f, %f, %s", x, y, tok);
 }
 
 void parseCSV(char* pathfile) {
@@ -321,12 +319,12 @@ void printStatistics(){
     printf("Program Type:\t\tSequential\n");
     printf("Number Of Threads:\t1\n");
 
-    double totalTime=timeIO+executionTime;
+    long totalTime=timeIO+executionTime;
 
-    printf("I/O time:\t\t\t%f ns\t(%f%%)\n", timeIO, (timeIO/totalTime)*100);
-    printf("Execution Time:\t\t%f ns\t\t(%f%%)\n", executionTime, (executionTime/totalTime)*100);
+    printf("I/O time:\t\t\t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
+    printf("Execution Time:\t\t%ld ns\t\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
     printf("----------------------------------------------------------------------\n");
-    printf("Total time:\t\t\t%f ns\t(100%%)\n", totalTime);
+    printf("Total time:\t\t\t%ld ns\t(100%%)\n", totalTime);
 
 
     printf("----------------------------------------------------------------------\n\n");
@@ -336,12 +334,12 @@ void printStatistics(){
 int main() {
     //read the file
     //the files are in the CMakeFiles folder
-    struct timespec start, stop;
-    clock_gettime(CLOCK_REALTIME, &start);
+    struct timeval start, stop;
+    gettimeofday(&start,NULL);
 
     printf("Sequential program execution: \n\n");
-    char* initialCentroidsFileName="/initialCentroids1.csv";
-    char* pointsFileName="/testPoints.csv";
+    char* initialCentroidsFileName="/initialCentroids.csv";
+    char* pointsFileName="/points.csv";
 
     char description[100];
     char* currentPath=getcwd(description, sizeof(description));
@@ -359,27 +357,28 @@ int main() {
     //create the clusters and read centroid
     readCentroid(pathFileCentroids);
 
-    clock_gettime(CLOCK_REALTIME, &stop);
-    timeIO=((stop.tv_sec-start.tv_sec)/(double) BILLION)+(stop.tv_nsec-start.tv_nsec);
+    gettimeofday(&stop, NULL);
+    timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
 
 
-    clock_gettime(CLOCK_REALTIME, &start);
+
+    gettimeofday(&start,NULL);
 
     //runs kmeans
     kMeans();
 
-    clock_gettime(CLOCK_REALTIME, &stop);
-    executionTime=((stop.tv_sec-start.tv_sec)/(double) BILLION)+(stop.tv_nsec-start.tv_nsec);
+    gettimeofday(&stop, NULL);
+    executionTime=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
 
 
-    clock_gettime(CLOCK_REALTIME, &start);
+    gettimeofday(&start,NULL);
 
     printPoint();
 
-    clock_gettime(CLOCK_REALTIME, &stop);
-    timeIO=timeIO+(((stop.tv_sec-start.tv_sec)/(double) BILLION)+(stop.tv_nsec-start.tv_nsec));
+    gettimeofday(&stop, NULL);
+    timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
     printStatistics();
 }
