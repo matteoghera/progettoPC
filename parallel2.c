@@ -1,3 +1,7 @@
+//
+// Created by matteoinformatica on 06/03/19.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -67,8 +71,12 @@ void *MakeCluster(void *input) { //parallelized
     int colonne = 3;
     int r, c;
     myClusterDescription = (double **) malloc((righe) * sizeof(double));
-    for (r = 0; r < colonne; r++)
+    for (r = 0; r < colonne; r++){
         myClusterDescription[r] = (double *) malloc((colonne) * sizeof(double));
+        myClusterDescription[r][0]=0;
+        myClusterDescription[r][1]=0;
+        myClusterDescription[r][2]=0;
+    }
 
 
     int endPoints = FALSE;
@@ -101,7 +109,7 @@ void *MakeCluster(void *input) { //parallelized
         nextRecord->cluster = minCluster;
         myClusterDescription[clusterIndex][0] += nextRecord->x;
         myClusterDescription[clusterIndex][1] += nextRecord->y;
-        myClusterDescription[clusterIndex][2]++;
+        myClusterDescription[clusterIndex][2]= myClusterDescription[clusterIndex][2]+1;
 
         if (nextRecord->next == NULL)
             endPoints = TRUE;
@@ -167,8 +175,12 @@ int parallelKMeans() {
     int colonne = 3;
     int r, c;
     clusterDescription = (double **) malloc((righe) * sizeof(double));
-    for (r = 0; r < colonne; r++)
+    for (r = 0; r < colonne; r++){
         clusterDescription[r] = (double *) malloc((colonne) * sizeof(double));
+        clusterDescription[r][0]=0;
+        clusterDescription[r][1]=0;
+        clusterDescription[r][2]=0;
+    }
 
 
     pthread_t threads[NUM_PROCRESS];
@@ -345,7 +357,7 @@ void parseCSV(char *pathfile) {
         exit(1);
     }
 
-    // read each line 
+    // read each line
     while (1) {
         ssize_t res;
         char *buf = NULL;
@@ -428,6 +440,4 @@ int main() {
     kMeans(); //parallelized
 
     printPoint();
-
-
 }
