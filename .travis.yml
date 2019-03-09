@@ -1,10 +1,12 @@
 os:
   - osx
 
+osx_image: xcode10.1
+
 language: c
 sudo: false # only for faster builds
 compiler: gcc
 
 script:
-- gcc parallel.c -o parallel -lpthread -lm
+- gcc parallel2.c -o parallel -lpthread -lm
 - ./parallel
