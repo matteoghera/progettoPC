@@ -453,12 +453,12 @@ int main() {
 
 
 
-    gettimeofday(&start,NULL);
+    //gettimeofday(&start,NULL);
 
-    printPoint();
+    //printPoint();
 
-    gettimeofday(&stop, NULL);
-    timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
+    //gettimeofday(&stop, NULL);
+    //timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
 
     printStatistics();
