@@ -5,8 +5,12 @@ osx_image: xcode10.1
 
 language: c
 sudo: false # only for faster builds
-compiler: gcc
-
+compiler: 
+   - gcc
+   - clang
+   
 script:
-- gcc parallel2.c -o parallel -lpthread -lm
-- ./parallel
+- cc sequential.c
+- ./a.out
+- cc parallel.c
+- ./a.out

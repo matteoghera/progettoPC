@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <signal.h>
+#include <time.h>
+#include <sys/time.h>
 
 
 //Pthreads libraries
@@ -15,7 +17,8 @@
 #define FALSE 0
 #define TRUE 1
 #define TOLL 0.01
-#define NUM_PROCRESS 3
+#define NUM_PROCRESS 10
+
 
 // stucture that represents each cluster.
 struct Clusters {
@@ -41,6 +44,7 @@ Points *head;
 Clusters *clusters;
 int numberOfPoints = 0, k = 0;
 int dimensionOfChunk;
+long timeIO, executionTime;
 
 
 double euclideanDistance(Clusters *currentCluster, Points *currentPoint) {
@@ -67,13 +71,16 @@ void *MakeCluster(void *input) { //parallelized
     int colonne = 3;
     int r, c;
     myClusterDescription = (double **) malloc((righe) * sizeof(double));
-    for (r = 0; r < colonne; r++)
+    for (r = 0; r < colonne; r++){
         myClusterDescription[r] = (double *) malloc((colonne) * sizeof(double));
+        myClusterDescription[r][0]=0;
+        myClusterDescription[r][1]=0;
+        myClusterDescription[r][2]=0;
+    }
 
 
     int endPoints = FALSE;
     int i = 0;
-    int x = dimensionOfChunk; //variable not use: it has been iserted for view the value of dimensionOfChunk
     while (i < dimensionOfChunk && endPoints == FALSE) {
         double min = 10000;
         Clusters *minCluster;
@@ -101,7 +108,7 @@ void *MakeCluster(void *input) { //parallelized
         nextRecord->cluster = minCluster;
         myClusterDescription[clusterIndex][0] += nextRecord->x;
         myClusterDescription[clusterIndex][1] += nextRecord->y;
-        myClusterDescription[clusterIndex][2]++;
+        myClusterDescription[clusterIndex][2]= myClusterDescription[clusterIndex][2]+1;
 
         if (nextRecord->next == NULL)
             endPoints = TRUE;
@@ -132,7 +139,6 @@ int computesAverangeForAllClusters(double **actualClusterDescription) {
             result = TRUE;
             nextCluster->cx = newCenterX;
             nextCluster->cy = newCenterY;
-            printf("centroidi: %f, %f", newCenterX, newCenterY);
         }
         nextCluster = nextCluster->next;
     }
@@ -167,43 +173,29 @@ int parallelKMeans() {
     int colonne = 3;
     int r, c;
     clusterDescription = (double **) malloc((righe) * sizeof(double));
-    for (r = 0; r < colonne; r++)
+    for (r = 0; r < colonne; r++){
         clusterDescription[r] = (double *) malloc((colonne) * sizeof(double));
+        clusterDescription[r][0]=0;
+        clusterDescription[r][1]=0;
+        clusterDescription[r][2]=0;
+    }
 
 
     pthread_t threads[NUM_PROCRESS];
     short i;
-    int result_code;
 
     for (i = 0; i < NUM_PROCRESS; i++) {
-        printf("Thread %d has been created.\n", i + 1);
-        result_code = pthread_create(&threads[i], NULL, MakeCluster, (void *) headChunk);
+        pthread_create(&threads[i], NULL, MakeCluster, (void *) headChunk);
         headChunk = assignChuncks(headChunk);
     }
-    printf("All threads are created.\n");
 
     for (i = 0; i < NUM_PROCRESS; i++) {
         double **myClusterDescription;
-        result_code = pthread_join(threads[i], (void *) &myClusterDescription);
-        printf("Thread %d ended.\n", i + 1);
+        pthread_join(threads[i], (void *) &myClusterDescription);
 
-        printf("R:%d ", righe);
-        printf("C:%d ", colonne);
-        printf("\n");
-        for (r = 0; r < righe; r++) {
-            for (c = 0; c < colonne; c++)
-                printf("my:%f ", myClusterDescription[r][c]);
-            printf("\n");
-        }
+
         mergeSolution(clusterDescription, myClusterDescription);
 
-    }
-
-
-    for (r = 0; r < righe; r++) {
-        printf("cluster description : %f \n ", clusterDescription[r][0]);
-        printf("cluster description : %f \n ", clusterDescription[r][1]);
-        printf("cluster description : %f \n ", clusterDescription[r][2]);
     }
 
     return computesAverangeForAllClusters(clusterDescription);
@@ -214,15 +206,14 @@ void kMeans() {
     /*
      * implements kmeans algorithm.
      */
-    int i = 0;
+    //int i = 0;
     int changed = TRUE;
     clusters = clusters->next;
     while (changed == TRUE) {
-        printf("CHANGED: %d \n", changed);
-        i++;
+        //i++;
         changed = parallelKMeans(); //parallelized
     }
-    printf("Number Of Iterations: %d\n", i);
+    //printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint() {
@@ -318,11 +309,10 @@ void addCentroid(char record[]) {
     tok = strtok(NULL, ",");
     double y = atof(tok);
 
-    tok = strtok(NULL, ",\n");
+    tok = strtok(NULL, "\n");
     newRecord->cx = x;
     newRecord->cy = y;
     newRecord->label = tok;
-    //printf("%f, %f, %s", x, y, tok);
 }
 
 void parseCSV(char *pathfile) {
@@ -345,7 +335,7 @@ void parseCSV(char *pathfile) {
         exit(1);
     }
 
-    // read each line 
+    // read each line
     while (1) {
         ssize_t res;
         char *buf = NULL;
@@ -399,13 +389,34 @@ void readCentroid(char *pathfile) {
     fclose(fd);
 }
 
+void printStatistics(){
+    printf("\n\n\n----------------------------------------------------------------------");
+    printf("\n----------------------- STATISTICS -----------------------------------");
+    printf("\n----------------------------------------------------------------------\n\n");
+
+    printf("Program Type:\t\tParallel\n");
+    printf("Number Of Threads:\t%d\n", NUM_PROCRESS);
+
+    long totalTime=timeIO+executionTime;
+
+    printf("I/O time:\t\t\t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
+    printf("Execution Time:\t\t%ld ns\t\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
+    printf("----------------------------------------------------------------------\n");
+    printf("Total time:\t\t\t%ld ns\t(100%%)\n", totalTime);
+
+
+    printf("----------------------------------------------------------------------\n\n");
+}
 
 int main() {
     //read the file
     //the files are in the CMakeFiles folder
+    struct timeval start, stop;
+    gettimeofday(&start,NULL);
+
     printf("Parallel program execution:\n\n");
-    char *initialCentroidsFileName = "/initialCentroids1.csv";
-    char *pointsFileName = "/testPoints.csv";
+    char *initialCentroidsFileName = "/initialCentroids.csv";
+    char *pointsFileName = "/points.csv";
 
     char description[100];
     char *currentPath = getcwd(description, sizeof(description));
@@ -414,7 +425,7 @@ int main() {
     char *pathFilePoints = strcpy(path_centroids, currentPath);
     pathFileCentroids = strcat(pathFileCentroids, initialCentroidsFileName);
     pathFilePoints = strcat(pathFilePoints, pointsFileName);
-    printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
+    //printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
 
     //save the coordinates into the structure Point
     parseCSV(pathFilePoints);
@@ -422,12 +433,33 @@ int main() {
     //create the clusters and read centroid
     readCentroid(pathFileCentroids);
 
+    gettimeofday(&stop, NULL);
+    timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
+
+
+
+
+
+    gettimeofday(&start,NULL);
+
     //create data chunk for threads
     dimensionOfChunk = (int) ceil(((double) numberOfPoints) / ((double) NUM_PROCRESS));
 
     kMeans(); //parallelized
 
-    printPoint();
+    gettimeofday(&stop, NULL);
+    executionTime=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
 
+
+
+    //gettimeofday(&start,NULL);
+
+    //printPoint();
+
+    //gettimeofday(&stop, NULL);
+    //timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
+
+
+    printStatistics();
 }
