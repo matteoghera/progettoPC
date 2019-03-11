@@ -1,0 +1,16 @@
+os:
+  - osx
+
+osx_image: xcode10.1
+
+language: c
+sudo: false # only for faster builds
+compiler: 
+   - gcc
+   - clang
+   
+script:
+- cc sequential.c
+- ./a.out
+- cc parallel.c
+- ./a.out
