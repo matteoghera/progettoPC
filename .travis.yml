@@ -7,7 +7,7 @@ language: c
 sudo: false # only for faster builds
 compiler: 
    - gcc
-   - clang
+   #- clang
    
 script:
 - cc sequential.c
