@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/claudialorenzi/CLionProjects/pc/parallel.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+unistd.h
+-
+string.h
+-
+signal.h
+-
+time.h
+-
+sys/time.h
+-
+pthread.h
+-
+

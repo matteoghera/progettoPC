@@ -7,7 +7,7 @@ language: c
 sudo: false # only for faster builds
 
 script:
-- cc sequential.c 
-- ./a.out
-- cc parallel.c  
-- ./a.out
+- cd CLion/cmake-build-debug
+- make -f Makefile 
+- ./sequential
+- ./parallel
