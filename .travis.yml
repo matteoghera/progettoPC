@@ -12,5 +12,15 @@ compiler:
 script:
 - cc sequential.c
 - ./a.out
-- cc parallel.c
+- cc parallel3.c
+- ./a.out
+- cc parallel5.c
+- ./a.out
+- cc parallel10.c
+- ./a.out
+- cc parallel15.c
+- ./a.out
+- cc parallel25.c
+- ./a.out
+- cc parallel50.c
 - ./a.out
