@@ -24,3 +24,7 @@ script:
 - ./a.out
 - cc parallel50.c
 - ./a.out
+- cc parallel75.c
+- ./a.out
+- cc parallel100.c
+- ./a.out
