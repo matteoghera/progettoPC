@@ -206,14 +206,14 @@ void kMeans() {
     /*
      * implements kmeans algorithm.
      */
-    int i = 0;
+    //int i = 0;
     int changed = TRUE;
     clusters = clusters->next;
     while (changed == TRUE) {
-        i++;
+        //i++;
         changed = parallelKMeans(); //parallelized
     }
-    printf("Number Of Iterations: %d\n", i);
+    //printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint() {
@@ -425,7 +425,7 @@ int main() {
     char *pathFilePoints = strcpy(path_centroids, currentPath);
     pathFileCentroids = strcat(pathFileCentroids, initialCentroidsFileName);
     pathFilePoints = strcat(pathFilePoints, pointsFileName);
-    printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
+    //printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
 
     //save the coordinates into the structure Point
     parseCSV(pathFilePoints);
