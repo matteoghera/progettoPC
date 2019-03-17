@@ -12,37 +12,37 @@ compiler:
 script:
 - cc sequentialWithCirclePoints.c
 - ./a.out
-- cc paralleWithCirclePoints3.c
+- cc parallelWithCirclePoints3.c
 - ./a.out
-- cc paralleWithCirclePoints5.c
+- cc parallelWithCirclePoints5.c
 - ./a.out
-- cc paralleWithCirclePoints10.c
+- cc parallelWithCirclePoints10.c
 - ./a.out
-- cc paralleWithCirclePoints15.c
+- cc parallelWithCirclePoints15.c
 - ./a.out
-- cc paralleWithCirclePoints25.c
+- cc parallelWithCirclePoints25.c
 - ./a.out
-- cc paralleWithCirclePoints50.c
+- cc parallelWithCirclePoints50.c
 - ./a.out
-- cc paralleWithCirclePoints75.c
+- cc parallelWithCirclePoints75.c
 - ./a.out
-- cc paralleWithCirclePoints100.c
+- cc parallelWithCirclePoints100.c
 - ./a.out
 - cc sequentialWithRectangularPoints.c
 - ./a.out
-- cc paralleWithRectangularPoints3.c
+- cc parallelWithRectangularPoints3.c
 - ./a.out
-- cc paralleWithRectangularPoints5.c
+- cc parallelWithRectangularPoints5.c
 - ./a.out
-- cc paralleWithRectangularPoints10.c
+- cc parallelWithRectangularPoints10.c
 - ./a.out
-- cc paralleWithRectangularPoints15.c
+- cc parallelWithRectangularPoints15.c
 - ./a.out
-- cc paralleWithRectangularPoints25.c
+- cc parallelWithRectangularPoints25.c
 - ./a.out
-- cc paralleWithRectangularPoints50.c
+- cc parallelWithRectangularPoints50.c
 - ./a.out
-- cc paralleWithRectangularPoints75.c
+- cc parallelWithRectangularPoints75.c
 - ./a.out
-- cc paralleWithRectangularPoints100.c
+- cc parallelWithRectangularPoints100.c
 - ./a.out
