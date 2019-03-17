@@ -10,21 +10,39 @@ compiler:
    #- clang
    
 script:
-- cc sequential.c
+- cc sequentialWithCirclePoints.c
 - ./a.out
-- cc parallel3.c
+- cc paralleWithCirclePoints3.c
 - ./a.out
-- cc parallel5.c
+- cc paralleWithCirclePoints5.c
 - ./a.out
-- cc parallel10.c
+- cc paralleWithCirclePoints10.c
 - ./a.out
-- cc parallel15.c
+- cc paralleWithCirclePoints15.c
 - ./a.out
-- cc parallel25.c
+- cc paralleWithCirclePoints25.c
 - ./a.out
-- cc parallel50.c
+- cc paralleWithCirclePoints50.c
 - ./a.out
-- cc parallel75.c
+- cc paralleWithCirclePoints75.c
 - ./a.out
-- cc parallel100.c
+- cc paralleWithCirclePoints100.c
+- ./a.out
+- cc sequentialWithRectangularPoints.c
+- ./a.out
+- cc paralleWithRectangularPoints3.c
+- ./a.out
+- cc paralleWithRectangularPoints5.c
+- ./a.out
+- cc paralleWithRectangularPoints10.c
+- ./a.out
+- cc paralleWithRectangularPoints15.c
+- ./a.out
+- cc paralleWithRectangularPoints25.c
+- ./a.out
+- cc paralleWithRectangularPoints50.c
+- ./a.out
+- cc paralleWithRectangularPoints75.c
+- ./a.out
+- cc paralleWithRectangularPoints100.c
 - ./a.out

@@ -17,7 +17,7 @@
 #define FALSE 0
 #define TRUE 1
 #define TOLL 0.01
-#define NUM_PROCRESS 15
+#define NUM_PROCRESS 25
 
 
 // stucture that represents each cluster.
@@ -415,8 +415,8 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Parallel program execution:\n\n");
-    char *initialCentroidsFileName = "/initialCentroids.csv";
-    char *pointsFileName = "/points.csv";
+    char *initialCentroidsFileName = "/rectangularCentroids.csv";
+    char *pointsFileName = "/rectangularPoints.csv";
 
     char description[100];
     char *currentPath = getcwd(description, sizeof(description));
@@ -425,7 +425,7 @@ int main() {
     char *pathFilePoints = strcpy(path_centroids, currentPath);
     pathFileCentroids = strcat(pathFileCentroids, initialCentroidsFileName);
     pathFilePoints = strcat(pathFilePoints, pointsFileName);
-    //printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
+    printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
 
     //save the coordinates into the structure Point
     parseCSV(pathFilePoints);

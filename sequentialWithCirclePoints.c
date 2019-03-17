@@ -149,7 +149,7 @@ void kMeans(){
         MakeCluster();
         changed=computesAverangeForAllClusters();
     }
-    printf("Number Of Iterations: %d\n", i);
+    //printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint(){
@@ -338,8 +338,8 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Sequential program execution: \n\n");
-    char* initialCentroidsFileName="/initialCentroids.csv";
-    char* pointsFileName="/points.csv";
+    char* initialCentroidsFileName="/circleCentroids.csv";
+    char* pointsFileName="/circlePoints.csv";
 
     char description[100];
     char* currentPath=getcwd(description, sizeof(description));
@@ -348,7 +348,7 @@ int main() {
     char* pathFilePoints=strcpy(path_centroids, currentPath);
     pathFileCentroids=strcat(pathFileCentroids,initialCentroidsFileName);
     pathFilePoints=strcat(pathFilePoints,pointsFileName);
-    //printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
+    printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
 
 
     //save the coordinates into the structure Point
