@@ -1,20 +1,19 @@
+sudo: false # only for faster builds
+dist: trusty
+
+matrix:
+ include:
+# First Job
 os:
   - osx
 
 osx_image: xcode10.1
 
 language: c
-sudo: false # only for faster builds
+
 compiler: 
    - gcc
    #- clang
-dist: trusty
-
-
-matrix:
- include:
-# First Job
-   
 script:
 - cc sequentialWithCirclePoints.c
 - ./a.out
@@ -37,6 +36,17 @@ script:
 
  after_success:
 # Second Job
+os:
+  - osx
+
+osx_image: xcode10.1
+
+language: c
+
+compiler: 
+   - gcc
+   #- clang
+
 script:
 - cc sequentialWithRectangularPoints.c
 - ./a.out
