@@ -8,6 +8,12 @@ sudo: false # only for faster builds
 compiler: 
    - gcc
    #- clang
+dist: trusty
+
+
+matrix:
+ include:
+# First Job
    
 script:
 - cc sequentialWithCirclePoints.c
@@ -28,6 +34,10 @@ script:
 - ./a.out
 - cc parallelWithCirclePoints100.c
 - ./a.out
+
+ after_success:
+# Second Job
+script:
 - cc sequentialWithRectangularPoints.c
 - ./a.out
 - cc parallelWithRectangularPoints3.c
