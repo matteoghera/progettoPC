@@ -7,10 +7,42 @@ language: c
 sudo: false # only for faster builds
 compiler: 
    - gcc
-   - clang
+   #- clang
    
 script:
-- cc sequential.c
+- cc sequentialWithCirclePoints.c
 - ./a.out
-- cc parallel.c
+- cc parallelWithCirclePoints3.c
+- ./a.out
+- cc parallelWithCirclePoints5.c
+- ./a.out
+- cc parallelWithCirclePoints10.c
+- ./a.out
+- cc parallelWithCirclePoints15.c
+- ./a.out
+- cc parallelWithCirclePoints25.c
+- ./a.out
+- cc parallelWithCirclePoints50.c
+- ./a.out
+- cc parallelWithCirclePoints75.c
+- ./a.out
+- cc parallelWithCirclePoints100.c
+- ./a.out
+- cc sequentialWithRectangularPoints.c
+- ./a.out
+- cc parallelWithRectangularPoints3.c
+- ./a.out
+- cc parallelWithRectangularPoints5.c
+- ./a.out
+- cc parallelWithRectangularPoints10.c
+- ./a.out
+- cc parallelWithRectangularPoints15.c
+- ./a.out
+- cc parallelWithRectangularPoints25.c
+- ./a.out
+- cc parallelWithRectangularPoints50.c
+- ./a.out
+- cc parallelWithRectangularPoints75.c
+- ./a.out
+- cc parallelWithRectangularPoints100.c
 - ./a.out

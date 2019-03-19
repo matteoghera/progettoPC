@@ -149,7 +149,7 @@ void kMeans(){
         MakeCluster();
         changed=computesAverangeForAllClusters();
     }
-    printf("Number Of Iterations: %d\n", i);
+    //printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint(){
@@ -316,15 +316,15 @@ void printStatistics(){
     printf("\n----------------------- STATISTICS -----------------------------------");
     printf("\n----------------------------------------------------------------------\n\n");
 
-    printf("Program Type:\t\tSequential\n");
+    printf("Program Type:     \tSequential\n");
     printf("Number Of Threads:\t1\n");
 
     long totalTime=timeIO+executionTime;
 
-    printf("I/O time:\t\t\t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
-    printf("Execution Time:\t\t%ld ns\t\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
+    printf("I/O time:         \t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
+    printf("Execution Time:   \t%ld ns\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
     printf("----------------------------------------------------------------------\n");
-    printf("Total time:\t\t\t%ld ns\t(100%%)\n", totalTime);
+    printf("Total time:       \t%ld ns\t(100%%)\n", totalTime);
 
 
     printf("----------------------------------------------------------------------\n\n");
@@ -338,8 +338,8 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Sequential program execution: \n\n");
-    char* initialCentroidsFileName="/initialCentroids.csv";
-    char* pointsFileName="/points.csv";
+    char* initialCentroidsFileName="/circleCentroids.csv";
+    char* pointsFileName="/circlePoints.csv";
 
     char description[100];
     char* currentPath=getcwd(description, sizeof(description));
