@@ -17,7 +17,7 @@
 #define FALSE 0
 #define TRUE 1
 #define TOLL 0.01
-#define NUM_PROCRESS 10
+#define NUM_PROCRESS 15
 
 
 // stucture that represents each cluster.
@@ -394,15 +394,15 @@ void printStatistics(){
     printf("\n----------------------- STATISTICS -----------------------------------");
     printf("\n----------------------------------------------------------------------\n\n");
 
-    printf("Program Type:\t\tParallel\n");
+    printf("Program Type:     \tParallel\n");
     printf("Number Of Threads:\t%d\n", NUM_PROCRESS);
 
     long totalTime=timeIO+executionTime;
 
-    printf("I/O time:\t\t\t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
-    printf("Execution Time:\t\t%ld ns\t\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
+    printf("I/O time:         \t%ld ns\t(%f%%)\n", timeIO, ((double)timeIO/(double)totalTime)*100);
+    printf("Execution Time:   \t%ld ns\t(%f%%)\n", executionTime, ((double) executionTime/(double)totalTime)*100);
     printf("----------------------------------------------------------------------\n");
-    printf("Total time:\t\t\t%ld ns\t(100%%)\n", totalTime);
+    printf("Total time:       \t%ld ns\t(100%%)\n", totalTime);
 
 
     printf("----------------------------------------------------------------------\n\n");
@@ -415,8 +415,8 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Parallel program execution:\n\n");
-    char *initialCentroidsFileName = "/initialCentroids.csv";
-    char *pointsFileName = "/points.csv";
+    char *initialCentroidsFileName = "/rectangularCentroids.csv";
+    char *pointsFileName = "/rectangularPoints.csv";
 
     char description[100];
     char *currentPath = getcwd(description, sizeof(description));
@@ -425,7 +425,7 @@ int main() {
     char *pathFilePoints = strcpy(path_centroids, currentPath);
     pathFileCentroids = strcat(pathFileCentroids, initialCentroidsFileName);
     pathFilePoints = strcat(pathFilePoints, pointsFileName);
-    //printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
+    printf("CSV paths: %s, %s\n", pathFileCentroids, pathFilePoints);
 
     //save the coordinates into the structure Point
     parseCSV(pathFilePoints);
