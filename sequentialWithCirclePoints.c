@@ -338,7 +338,7 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Sequential program execution: \n\n");
-    char* initialCentroidsFileName="/circleCentroids.csv";
+    char* initialCentroidsFileName="/datasetCentroids.csv";
     char* pointsFileName="/circlePoints.csv";
 
     char description[100];

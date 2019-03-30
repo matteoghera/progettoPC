@@ -415,7 +415,7 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Parallel program execution:\n\n");
-    char *initialCentroidsFileName = "/rectangularCentroids.csv";
+    char *initialCentroidsFileName = "/datasetCentroids.csv";
     char *pointsFileName = "/rectangularPoints.csv";
 
     char description[100];
