@@ -149,7 +149,7 @@ void kMeans(){
         MakeCluster();
         changed=computesAverangeForAllClusters();
     }
-    //printf("Number Of Iterations: %d\n", i);
+    printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint(){
