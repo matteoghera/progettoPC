@@ -12,15 +12,39 @@ compiler:
 script:
 - cc sequentialWithCirclePoints.c
 - ./a.out
-- cc parallelWithCirclePoints.c
+- cc parallelWithCirclePoints_#2.c
+- ./a.out
+- cc parallelWithCirclePoints_#3.c
+- ./a.out
+- cc parallelWithCirclePoints_#5.c
+- ./a.out
+- cc parallelWithCirclePoints_#10.c
+- ./a.out
+- cc parallelWithCirclePoints_#15.c
 - ./a.out
 - cc sequentialWith2CirclePoints.c
 - ./a.out
-- cc parallelWith2CirclePoints.c
+- cc parallelWith2CirclePoints_#2.c
+- ./a.out
+- cc parallelWith2CirclePoints_#3.c
+- ./a.out
+- cc parallelWith2CirclePoints_#5.c
+- ./a.out
+- cc parallelWith2CirclePoints_#10.c
+- ./a.out
+- cc parallelWith2CirclePoints_#15.c
 - ./a.out
 - cc sequentialWithRectangularPoints.c
 - ./a.out
-- cc parallelWithRectangularPoints.c
+- cc parallelWithRectangularPoints_#2.c
+- ./a.out
+- cc parallelWithRectangularPoints_#3.c
+- ./a.out
+- cc parallelWithRectangularPoints_#5.c
+- ./a.out
+- cc parallelWithRectangularPoints_#10.c
+- ./a.out
+- cc parallelWithRectangularPoints_#15.c
 - ./a.out
 
 
