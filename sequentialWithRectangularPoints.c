@@ -149,7 +149,7 @@ void kMeans(){
         MakeCluster();
         changed=computesAverangeForAllClusters();
     }
-    //printf("Number Of Iterations: %d\n", i);
+    printf("Number Of Iterations: %d\n", i);
 }
 
 void printPoint(){
@@ -338,7 +338,7 @@ int main() {
     gettimeofday(&start,NULL);
 
     printf("Sequential program execution: \n\n");
-    char* initialCentroidsFileName="/rectangularCentroids.csv";
+    char* initialCentroidsFileName="/datasetCentroids.csv";
     char* pointsFileName="/rectangularPoints.csv";
 
     char description[100];
