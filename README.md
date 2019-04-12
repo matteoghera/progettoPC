@@ -1,4 +1,4 @@
-# Primo Mid-term di *Parallel Computing*
+# Mid-term project di *Parallel Computing*
 
 Autori: Luisa Collodi luisa.collodi@stud.unifi.it, Matteo Ghera matteo.ghera@stud.unifi.it
 
