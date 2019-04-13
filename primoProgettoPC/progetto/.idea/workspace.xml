@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="progetto" targetName="sequential" />
+      <config projectName="progetto" targetName="parallel" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8476bdab-fe01-4fba-b787-1679cc85688c" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1865026428">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="60" />
+          <entry key="project.open.time.102" value="1" />
+          <entry key="project.open.time.103" value="2" />
+          <entry key="project.open.time.105" value="4" />
+          <entry key="project.open.time.106" value="2" />
+          <entry key="project.open.time.108" value="1" />
+          <entry key="project.open.time.109" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.110" value="1" />
+          <entry key="project.open.time.115" value="1" />
+          <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.117" value="1" />
+          <entry key="project.open.time.118" value="1" />
+          <entry key="project.open.time.125" value="1" />
+          <entry key="project.open.time.126" value="1" />
+          <entry key="project.open.time.127" value="1" />
+          <entry key="project.open.time.129" value="2" />
+          <entry key="project.open.time.130" value="1" />
+          <entry key="project.open.time.132" value="1" />
+          <entry key="project.open.time.136" value="2" />
+          <entry key="project.open.time.138" value="1" />
+          <entry key="project.open.time.145" value="1" />
+          <entry key="project.open.time.146" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.74" value="2" />
+          <entry key="project.open.time.77" value="2" />
+          <entry key="project.open.time.78" value="1" />
+          <entry key="project.open.time.81" value="1" />
+          <entry key="project.open.time.84" value="1" />
+          <entry key="project.open.time.85" value="1" />
+          <entry key="project.open.time.87" value="1" />
+          <entry key="project.open.time.89" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.open.time.90" value="2" />
+          <entry key="project.open.time.95" value="4" />
+          <entry key="project.open.time.96" value="2" />
+          <entry key="project.open.time.97" value="2" />
+          <entry key="project.open.time.99" value="1" />
+          <entry key="project.opened" value="65" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="c" value="12264" />
+          <entry key="csv" value="136" />
+          <entry key="txt" value="196" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="196" />
+          <entry key="CSV" value="120" />
+          <entry key="ObjectiveC" value="12264" />
+          <entry key="PLAIN_TEXT" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="c" value="23" />
+          <entry key="csv" value="65" />
+          <entry key="h" value="1" />
+          <entry key="parallel (disassembly)" value="2" />
+          <entry key="txt" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="9" />
+          <entry key="CSV" value="61" />
+          <entry key="Disassembly" value="2" />
+          <entry key="ObjectiveC" value="24" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sequential.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5205">
+              <caret line="347" column="38" selection-start-line="347" selection-start-column="38" selection-end-line="347" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/parallel.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="219" column="6" lean-forward="true" selection-start-line="219" selection-start-column="6" selection-end-line="219" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/initialCentroids.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>k</find>
+      <find>k</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/points.csv" />
+        <option value="$PROJECT_DIR$/testPoints2.csv" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/testPoints2.csv" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/testPoints.csv" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/points.csv" />
+        <option value="$PROJECT_DIR$/parallel2.c" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/initialCentroids1.csv" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/sequential.c" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/datasetCentroids.csv" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/initialCentroids.csv" />
+        <option value="$PROJECT_DIR$/parallel.c" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="636" />
+    <option name="y" value="173" />
+    <option name="width" value="1843" />
+    <option name="height" value="695" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="progetto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="progetto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="progetto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="progetto" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Parallel Computing/c++/2-asm_lock" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.parallel">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parallel" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progetto" TARGET_NAME="parallel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progetto" RUN_TARGET_NAME="parallel">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sequential" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="progetto" TARGET_NAME="sequential" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="progetto" RUN_TARGET_NAME="sequential">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.parallel" />
+      <item itemvalue="Application.sequential" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8476bdab-fe01-4fba-b787-1679cc85688c" name="Default Changelist" comment="" />
+      <created>1549643868705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549643868705</updated>
+      <workItem from="1549643874208" duration="3694000" />
+      <workItem from="1549650109138" duration="9953000" />
+      <workItem from="1549662214066" duration="4291000" />
+      <workItem from="1549670750737" duration="922000" />
+      <workItem from="1549698852829" duration="3074000" />
+      <workItem from="1549712283420" duration="894000" />
+      <workItem from="1549713605510" duration="10857000" />
+      <workItem from="1549726220212" duration="7231000" />
+      <workItem from="1549743876355" duration="967000" />
+      <workItem from="1549811888721" duration="209000" />
+      <workItem from="1549812643565" duration="4463000" />
+      <workItem from="1549818193839" duration="230000" />
+      <workItem from="1550501767218" duration="135000" />
+      <workItem from="1550502223471" duration="2756000" />
+      <workItem from="1550505260452" duration="6827000" />
+      <workItem from="1550567199191" duration="443000" />
+      <workItem from="1550761355142" duration="493000" />
+      <workItem from="1550916237950" duration="6017000" />
+      <workItem from="1550922975401" duration="141000" />
+      <workItem from="1550923680505" duration="1137000" />
+      <workItem from="1550930947860" duration="547000" />
+      <workItem from="1550932125883" duration="261000" />
+      <workItem from="1551169204918" duration="1302000" />
+      <workItem from="1551195388741" duration="8951000" />
+      <workItem from="1551247985503" duration="1956000" />
+      <workItem from="1551288948901" duration="3838000" />
+      <workItem from="1551335032878" duration="672000" />
+      <workItem from="1551352977888" duration="1338000" />
+      <workItem from="1551354474303" duration="80000" />
+      <workItem from="1551420889443" duration="828000" />
+      <workItem from="1551422249505" duration="216000" />
+      <workItem from="1551425264130" duration="5048000" />
+      <workItem from="1551442254957" duration="1674000" />
+      <workItem from="1551447612250" duration="3082000" />
+      <workItem from="1551461263797" duration="4226000" />
+      <workItem from="1551604493980" duration="5119000" />
+      <workItem from="1551684674126" duration="4021000" />
+      <workItem from="1551689580862" duration="397000" />
+      <workItem from="1551690113445" duration="892000" />
+      <workItem from="1551709638497" duration="166000" />
+      <workItem from="1551710438592" duration="3336000" />
+      <workItem from="1551724897337" duration="50000" />
+      <workItem from="1551766660929" duration="1880000" />
+      <workItem from="1551783860216" duration="1506000" />
+      <workItem from="1551786311119" duration="1858000" />
+      <workItem from="1551788646650" duration="1109000" />
+      <workItem from="1551896524834" duration="486000" />
+      <workItem from="1551897742779" duration="398000" />
+      <workItem from="1551909750341" duration="406000" />
+      <workItem from="1551939719468" duration="1283000" />
+      <workItem from="1551946228916" duration="341000" />
+      <workItem from="1551946790042" duration="722000" />
+      <workItem from="1551990504683" duration="1829000" />
+      <workItem from="1551992686492" duration="2967000" />
+      <workItem from="1552155206505" duration="1088000" />
+      <workItem from="1553013726165" duration="1946000" />
+      <workItem from="1553501803963" duration="427000" />
+      <workItem from="1553595504814" duration="170000" />
+      <workItem from="1553868769618" duration="1179000" />
+      <workItem from="1553976554386" duration="881000" />
+      <workItem from="1553977583617" duration="3799000" />
+      <workItem from="1553982157727" duration="1812000" />
+      <workItem from="1554740788742" duration="1861000" />
+      <workItem from="1554975461412" duration="4403000" />
+      <workItem from="1555050586558" duration="2788000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="147873000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="929" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19701162" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32958803" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46441948" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39950064" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32958803" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32958803" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32958803" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32982844" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="path_centroids" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/include/stdio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="370" lean-forward="true" selection-start-line="370" selection-end-line="370" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/points.csv" />
+    <entry file="file://$PROJECT_DIR$/testPoints.csv" />
+    <entry file="file://$PROJECT_DIR$/testPoints2.csv" />
+    <entry file="file://$PROJECT_DIR$/parallel_original.c" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/testPoints2.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parallel3.c" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/initialCentroids1.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/parallelClusteringCircle.csv" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/sequentialClustering.csv" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/points.csv" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/parallelClusteringCircle2.csv" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/rectangularPoints.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/datasetCentroids.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/parallelClusteringRectangular.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sequential.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5205">
+          <caret line="347" column="38" selection-start-line="347" selection-start-column="38" selection-end-line="347" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/testPoints.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/initialCentroids.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parallel.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="219" column="6" lean-forward="true" selection-start-line="219" selection-start-column="6" selection-end-line="219" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

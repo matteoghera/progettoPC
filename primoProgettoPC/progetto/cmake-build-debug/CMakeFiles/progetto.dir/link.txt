@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/progetto.dir/sequential.c.o CMakeFiles/progetto.dir/parallel.c.o  -o progetto -lm 
