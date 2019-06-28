@@ -134,7 +134,7 @@ int computesAverangeForAllClusters(double **actualClusterDescription) {
         double diffX = newCenterX - nextCluster->cx;
         double diffY = newCenterY - nextCluster->cy;
         if ((diffX > TOLL * (-1) && diffX < TOLL) && (diffY > TOLL * (-1) && diffY < TOLL)) {
-            result = FALSE;
+            //result = FALSE;
         } else {
             result = TRUE;
             nextCluster->cx = newCenterX;

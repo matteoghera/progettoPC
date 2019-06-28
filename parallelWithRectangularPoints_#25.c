@@ -17,7 +17,7 @@
 #define FALSE 0
 #define TRUE 1
 #define TOLL 0.01
-#define NUM_PROCRESS 5
+#define NUM_PROCRESS 25
 
 
 // stucture that represents each cluster.
