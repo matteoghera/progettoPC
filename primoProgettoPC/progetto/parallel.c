@@ -119,7 +119,6 @@ void *MakeCluster(void *input) { //parallelized
     pthread_exit((void *) myClusterDescription);
 }
 
-
 int computesAverangeForAllClusters(double **actualClusterDescription) {
     /*
      * computes the centroid as the average of all the points of each cluster, to minimize SSE.
@@ -132,9 +131,7 @@ int computesAverangeForAllClusters(double **actualClusterDescription) {
         newCenterY = actualClusterDescription[i][1] / actualClusterDescription[i][2];
         double diffX = newCenterX - nextCluster->cx;
         double diffY = newCenterY - nextCluster->cy;
-        if ((diffX > TOLL * (-1) && diffX < TOLL) && (diffY > TOLL * (-1) && diffY < TOLL)) {
-            result = FALSE;
-        } else {
+        if (!((diffX > TOLL * (-1) && diffX < TOLL) && (diffY > TOLL * (-1) && diffY < TOLL))) {
             result = TRUE;
             nextCluster->cx = newCenterX;
             nextCluster->cy = newCenterY;
@@ -196,8 +193,6 @@ int parallelKMeans() {
         mergeSolution(clusterDescription, myClusterDescription);
 
     }
-
-
     return computesAverangeForAllClusters(clusterDescription);
 
 }
@@ -277,7 +272,6 @@ void addRecord(char record[]) {
 
     nextRecord->next = newRecord;
 
-
     char *tok = strtok(record, ",");
     double x = atof(tok);
 
@@ -307,7 +301,6 @@ void addCentroid(char record[]) {
     newRecord->label = NULL;
 
     nextRecord->next = newRecord;
-
 
     char *tok = strtok(record, ",");
     double x = atof(tok);
@@ -445,10 +438,6 @@ int main() {
     gettimeofday(&stop, NULL);
     timeIO=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
 
-
-
-
-
     gettimeofday(&start,NULL);
 
     //create data chunk for threads
@@ -458,7 +447,6 @@ int main() {
 
     gettimeofday(&stop, NULL);
     executionTime=( ((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
-
 
     printPoint(pathOutputFile);
     printStatistics();
